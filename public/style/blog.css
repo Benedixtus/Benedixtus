@@ -20,10 +20,11 @@ body {
     min-height: 15vh;
     position: relative;
 }
+g path {
+    fill: rgba(50, 50, 50, 0.2);
+    transition: 1s;
+}
 #header div:nth-child(2) {
-    background-image: url(../photos/blog/components/logo.png);
-    background-position: center;
-    background-size: 95% auto;
     background-repeat: no-repeat;
     width: 35%;
 }
