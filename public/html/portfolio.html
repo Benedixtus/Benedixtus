@@ -143,6 +143,10 @@
 
     <script>
 
+        var fs = require('fs');
+        var files = fs.readdirSync('/photos');
+        console.log(files);
+
         const csempetarolo = document.querySelector(".csempe-tarolo");
         const megtekinto = document.querySelector(".megtekinto");
 
