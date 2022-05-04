@@ -1,0 +1,39 @@
+.opa-10 {
+    opacity: 0.1;
+}
+.opa-20 {
+    opacity: 0.2;
+}
+.opa-30 {
+    opacity: 0.3;
+}
+.opa-40 {
+    opacity: 0.4;
+}
+.opa-50 {
+    opacity: 0.5;
+}
+.opa-60 {
+    opacity: 0.6;
+}
+.opa-70 {
+    opacity: 0.7;
+}
+.opa-80 {
+    opacity: 0.8;
+}
+.opa-90 {
+    opacity: 0.9;
+}
+.opa-100 {
+    opacity: 1;
+}
+.bg-black {
+    background-color: black;
+}
+.bg-white {
+    background-color: white;
+}
+.bg-gray {
+    background-color: gray;
+}

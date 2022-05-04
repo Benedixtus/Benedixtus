@@ -1,0 +1,35 @@
+body {
+    height: 96%;
+    margin:0;
+    background-color: black;
+}
+.content-wrapper {
+    margin-top: 2.5vh;
+    margin-left: 2.5vh;
+    margin-right: 2.5vh;
+}
+
+.content-card {
+    height: 92vh;
+    margin-bottom: 2%;
+    background-color: black;
+    
+}
+
+#header {
+    height: 2.5vh; 
+    position: fixed; 
+    top:0%;
+    width:100%; 
+    background-color: black; 
+    z-index: 1;
+}
+
+#footer {
+    height: 2.5vh;
+    position: fixed; 
+    bottom:0%;
+    width:100%; 
+    background-color: black; 
+    z-index: 1;
+}

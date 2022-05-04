@@ -1,0 +1,10 @@
+.projects {
+    background-image: url(../photos/background/projects.jpg);
+    background-position: center;
+    background-size: cover;
+}
+.projects2 {
+    background-image: url(../photos/background/projects2.png);
+    background-position: center;
+    background-size: cover;
+}

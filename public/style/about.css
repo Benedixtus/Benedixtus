@@ -1,0 +1,14 @@
+.about {
+    background-image: url(../photos/background/about.jpg);
+    background-position: center;
+    background-size: cover;
+
+    text-align: center;
+
+}
+#me {
+    width: 40vh;
+    border-radius: 100%;
+    margin: 10vh;
+
+}

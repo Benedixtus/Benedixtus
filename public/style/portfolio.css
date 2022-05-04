@@ -1,0 +1,174 @@
+body {
+    background-color: black;
+    overflow-x: hidden;
+    overflow-y: auto;
+    position: auto;
+}
+.csempe-tarolo {
+    column-count: 3;
+    column-gap: 0;
+    width: 62vw;
+    margin: 0 auto;
+    z-index: 2;
+    margin-top: 2vh;
+}
+.csempe-panel {
+    break-inside: avoid;
+    padding: 0.25vw 0;
+    transition: 1s;
+    height:100%;
+    z-index: 100;
+}
+img {
+    width: 20vw;
+    transition: 0.3s;
+}
+.csempe-panel:hover {
+    filter: contrast(0.7) brightness(0.9);
+}
+.megtekinto {
+    background: rgba(0, 0, 0, 0.8);
+    height: 100vh;
+    width: 100vw;
+    position: -webkit-sticky; /* Safari */
+    position: fixed;
+    text-align: center;
+    z-index: 1;
+    top:0;
+    display: none;
+    transition: 0.5s;
+    opacity: 1;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  
+    -webkit-animation: elotunes 0.5s ; /* Chrome, Safari, Opera */
+    animation: elotunes 0.5s ;
+}
+.megtekinto img {
+    margin-top: 2.5%;
+    height: 90vh;
+    width: auto;
+    border-radius: 3px;
+}
+
+#bezaro {
+    display: inline-block;
+    opacity: 0.5;
+    transition: 0.25s;
+    transform: translateY(-85vh);
+    width: 15px;
+    height: 15px;
+    border: 2px solid rgba(150, 150, 150, 1);
+    border-radius: 15px;
+    background:
+        linear-gradient(45deg, rgba(0,0,0,0) 0%,rgba(0,0,0,0) 43%,rgba(150, 150, 150, 0.9) 45%,rgba(150, 150, 150, 0.9) 55%,rgba(0,0,0,0) 57%,rgba(0,0,0,0) 100%),
+        linear-gradient(135deg, rgba(50, 50, 50, 0.9) 0%,rgba(50, 50, 50, 0.9) 43%,rgba(150, 150, 150, 0.9) 45%,rgba(150, 150, 150, 0.9) 55%,rgba(50, 50, 50, 0.9) 57%,rgba(50, 50, 50, 0.9) 100%);
+}
+#bezaro:hover {
+    opacity: 0.8;
+}
+
+/* Chrome, Safari, Opera */
+@-webkit-keyframes elotunes {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+  
+  }
+  
+  /* Standard syntax */
+  @keyframes elotunes {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+  }
+
+#header {
+    padding: 3vh 0;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+
+    -webkit-animation: meretezes 2.5s ; /* Chrome, Safari, Opera */
+    animation: meretezes 2.5s ;
+}
+/* Chrome, Safari, Opera */
+@-webkit-keyframes meretezes {
+    0% {padding: 40vh 0;}
+    50% {padding: 40vh 0;}
+    100% {padding: 3vh 0;}
+  }
+  
+  /* Standard syntax */
+  @keyframes meretezes {
+    0% {padding: 40vh 0;}
+    50% {padding: 40vh 0;}
+    100% {padding: 3vh 0;}
+}
+  
+
+
+#header h1 {
+    font-family: 'EB Garamond', serif;
+    color: white;
+    font-size: 15vh;
+    text-align: center;
+    margin: auto;
+    margin-bottom: -2vh;
+    vertical-align: middle;
+    opacity: 1;
+
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+
+    -webkit-animation: elo 1s ; /* Chrome, Safari, Opera */
+    animation: elo 1s ;
+}
+/* Chrome, Safari, Opera */
+@-webkit-keyframes elo {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+  }
+  
+  /* Standard syntax */
+  @keyframes elo {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}
+  
+#header h2 {
+    font-family: 'EB Garamond', serif;
+    color: white;
+    font-size: 4vh;
+    letter-spacing: 1vh;
+    text-align: center;
+    margin: auto;
+    vertical-align: middle;
+    transform: translateY(0) translateX(0);
+    opacity: 1;
+
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+
+    -webkit-animation: portfolio_alcim 1s ; /* Chrome, Safari, Opera */
+    animation: portfolio_alcim 1s ;
+}
+
+/* Chrome, Safari, Opera */
+@-webkit-keyframes portfolio_alcim {
+    0% {transform: translateY(-15vh) translateX(2.5vh); opacity: 0; letter-spacing: 6.5vh;}
+    50% {transform: translateY(0) translateX(2.5vh); opacity: 1; letter-spacing: 6.5vh;}
+    100% {transform: translateY(0) translateX(0); opacity: 1; letter-spacing: 1vh;}
+  }
+  
+  /* Standard syntax */
+  @keyframes portfolio_alcim {
+    0% {transform: translateY(-15vh) translateX(2.5vh); opacity: 0; letter-spacing: 6.5vh;}
+    50% {transform: translateY(0) translateX(2.5vh); opacity: 1; letter-spacing: 6.5vh;}
+    100% {transform: translateY(0) translateX(0); opacity: 1; letter-spacing: 1vh;}
+}

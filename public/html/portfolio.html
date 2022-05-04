@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../style/portfolio.css">
+</head>
+<body>
+    <div id="header">
+        <div id="mozgodiv">
+        <h1>Benedixtus</h1>
+        <h2>portfolio</h2>
+        </div>
+    </div>
+    <div  class="csempe-tarolo">
+        <div class="csempe-panel" id="d1">
+            <div class="csempe-tartalom">
+                <img onclick="nagyit('1')" src="../photos/portfolio/1.jpg" alt="">
+            </div>
+        </div>
+
+        <div class="csempe-panel" id="d2">
+            <div class="csempe-tartalom">
+                <img onclick="nagyit('2')" src="../photos/portfolio/2.jpg" alt="">
+            </div>
+        </div>
+
+        <div class="csempe-panel" id="d3">
+            <div class="csempe-tartalom">
+                <img onclick="nagyit('3')" src="../photos/portfolio/3.jpg" alt="">
+            </div>
+        </div>
+
+        <div class="csempe-panel" id="d4">
+            <div class="csempe-tartalom">
+                <img onclick="nagyit('4')" src="../photos/portfolio/4.jpg" alt="">
+            </div>
+        </div>
+        
+        <div class="csempe-panel">
+            <div class="csempe-tartalom">
+                <img onclick="nagyit('5')" src="../photos/portfolio/5.jpg" alt="">
+            </div>
+        </div>
+
+        <div class="csempe-panel">
+            <div class="csempe-tartalom">
+                <img onclick="nagyit('6')" src="../photos/portfolio/6.jpg" alt="">
+            </div>
+        </div>
+
+        <div class="csempe-panel">
+            <div class="csempe-tartalom">
+                <img onclick="nagyit('7')" src="../photos/portfolio/7.jpg" alt="">
+            </div>
+        </div>
+
+        <div class="csempe-panel">
+            <div class="csempe-tartalom">
+                <img onclick="nagyit('8')" src="../photos/portfolio/8.jpg" alt="">
+            </div>
+        </div>
+
+        <div class="csempe-panel">
+            <div class="csempe-tartalom">
+                <img onclick="nagyit('9')" src="../photos/portfolio/9.jpg" alt="">
+            </div>
+        </div>
+
+        <div class="csempe-panel">
+            <div class="csempe-tartalom">
+                <img onclick="nagyit('10')" src="../photos/portfolio/10.jpg" alt="">
+            </div>
+        </div>
+
+        <div class="csempe-panel">
+            <div class="csempe-tartalom">
+                <img onclick="nagyit('11')" src="../photos/portfolio/11.jpg" alt="">
+            </div>
+        </div>
+
+        <div class="csempe-panel">
+            <div class="csempe-tartalom">
+                <img onclick="nagyit('12')" src="../photos/portfolio/12.jpg" alt="">
+            </div>
+        </div>
+
+        <div class="csempe-panel">
+            <div class="csempe-tartalom">
+                <img onclick="nagyit('13')" src="../photos/portfolio/13.jpg" alt="">
+            </div>
+        </div>
+
+        <div class="csempe-panel">
+            <div class="csempe-tartalom">
+                <img onclick="nagyit('14')" src="../photos/portfolio/14.jpg" alt="">
+            </div>
+        </div>
+
+        <div class="csempe-panel">
+            <div class="csempe-tartalom">
+                <img onclick="nagyit('15')" src="../photos/portfolio/15.jpg" alt="">
+            </div>
+        </div>
+
+        <div class="csempe-panel">
+            <div class="csempe-tartalom">
+                <img onclick="nagyit('16')" src="../photos/portfolio/16.jpg" alt="">
+            </div>
+        </div>
+
+        <div class="csempe-panel">
+            <div class="csempe-tartalom">
+                <img onclick="nagyit('17')" src="../photos/portfolio/17.jpg" alt="">
+            </div>
+        </div>
+
+        <div class="csempe-panel">
+            <div class="csempe-tartalom">
+                <img onclick="nagyit('18')" src="../photos/portfolio/18.jpg" alt="">
+            </div>
+        </div>
+
+        <div class="csempe-panel">
+            <div class="csempe-tartalom">
+                <img onclick="nagyit('19')" src="../photos/portfolio/19.jpg" alt="">
+            </div>
+        </div>
+
+        <div class="csempe-panel">
+            <div class="csempe-tartalom">
+                <img onclick="nagyit('20')" src="../photos/portfolio/20.jpg" alt="">
+            </div>
+        </div>
+    </div>
+
+    <div class="megtekinto" >
+        <img id="valtozo" src ="" alt="">
+        <span id="bezaro" onclick="bezar()"></span>
+    </div>
+
+    <script>
+
+        const csempetarolo = document.querySelector(".csempe-tarolo");
+        const megtekinto = document.querySelector(".megtekinto");
+
+        function nagyit(a) {
+            megtekinto.style.display = "block";
+            megtekinto.style.opacity = "1";
+            document.body.style.position = "static";
+            document.getElementById("valtozo").src="../photos/portfolio/" + a.toString() + ".jpg";
+
+
+        }
+        function bezar() {
+            megtekinto.style.opacity = '0';
+            document.body.style.position = "auto";
+            document.getElementById("valtozo").src="";
+            setTimeout("megtekinto.style.display = 'none';",1000);
+        }
+    </script>
+</body>
+</html>

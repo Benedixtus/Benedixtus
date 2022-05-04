@@ -1,0 +1,133 @@
+.photography {
+
+    background-image: url(../photos/background/photography.jpg);
+    background-position: center;
+    background-size: cover;
+}
+.photography .button-holder {
+    text-align: center;
+    vertical-align: bottom;
+    height: 8%;
+}
+#photojump {
+    height: 1px;
+    width: 100%;
+    transform: translateY(-6vh);
+
+}
+#portfolio-holder {
+    height: 100%;
+    width: 100%;
+    display: none;
+    visibility: hidden;
+    transition: 1s;
+
+    background: rgba(105, 105, 105, .7);    /*  70% opaque green */ 
+
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+
+    -webkit-animation: legordul 1s ; /* Chrome, Safari, Opera */
+    animation: legordul 1s ;
+}
+
+.photography table {
+    text-align: center;
+    height: 95%;
+    
+}
+.portfoliocard {
+    width: 20vw;
+    height: 70%;
+    transition: 1s;
+    border: 5px solid gray;
+    border-radius: 1%;
+    filter: grayscale(1);
+
+}
+.portfoliocard:hover {
+    width: 50vw;
+    filter: grayscale(0);
+}
+.photography h3 {
+    height: 90%;
+    width: 100%;
+    color: white;
+    font-size: 6vh;
+    text-align: center;
+
+    opacity: 0;
+    transition: 1s;
+}
+.photography h3:hover {
+    opacity: 1;
+}
+.portgomb {
+    height: 90%;
+    padding-top: 70vh;
+}
+.portfoliogomb {
+    text-align: center;
+    
+}
+.portfoliogomb button {
+    font-family: 'EB Garamond', serif;
+    text-decoration: none;
+    border-radius: 0;
+    color: white;
+    border: 0.2vh solid darkgray;
+    background-color: gray;
+    height: 100%;
+    width: 25vh;
+    font-size: 4vh;
+    text-align: center;
+}
+
+.portfoliovissza {
+    width: 10%;
+    margin: 0 auto;
+    transform: translateY(-50%);
+}
+.portfoliovissza i {
+    width: 2vw;
+    height: 2vw;
+    border: solid #303030 ;
+    border-width: 0 4px 4px 0;
+    display: inline-block;
+    padding: 3px;
+    transform: rotate(-135deg) translateY(-16px) translateX(-16px);
+    -webkit-transform: rotate(-135deg) translateY(-16px) translateX(-16px);
+    
+    
+}
+
+
+@-webkit-keyframes legordul {
+    0% {height: 0px}
+    100% {height: 100%}
+  
+  }
+  
+  @keyframes legordul {
+    0% {height: 0px}
+    100% {height: 100%}
+  }
+
+
+.season {
+    background-image: url(../photos/seasons.jpg);
+    background-position: center;
+    background-size: cover;
+}
+.portfolio {
+    background-image: url(../photos/portfolio.jpg);
+    background-position: center;
+    background-size: cover;
+}
+.dump {
+    background-image: url(../photos/dump.jpg);
+    background-position: center;
+    background-size: cover;
+}

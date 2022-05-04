@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Benedixtus</title>
+<!--  STILUSLAPOK -->
+    <link rel="stylesheet" href="style/main.css">
+    <link rel="stylesheet" href="style/homepage.css">
+    <link rel="stylesheet" href="style/photography.css">
+    <link rel="stylesheet" href="style/projects.css">
+    <link rel="stylesheet" href="style/about.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@500;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+<!-- KERET -->
+    <div id="header"></div>
+    <div id="footer"></div>
+<!-- NAVIGACIO -->   
+    <div id="navbar">
+        <div id="link-holder">
+            <table>
+            <tr>
+                <td>
+                    <a href="">Benedixtus</a>
+                </td>
+                <td id="navhely">
+                </td>
+                <td>
+                    <a onclick="gorduljle()">Photography</a>
+                </td>
+                <td>
+                    <a href="">Projects</a>
+                </td>
+                <td>
+                    <a href="">About</a>
+                </td>
+            </tr>
+            </table>
+        </div>
+    </div>
+<!-- NAVIGACIO VEGE -->
+
+<!-- OLDAL TARTALOM -->
+    <div class="content-wrapper">
+<!-- HOMEPAGE -->
+        <div class="content-card homepage">
+          <div class="ablak">  
+          </div>
+          <h1>Benedixtus</h1>
+          <h2>Photography - Design - Programming</h2>
+        </div>
+<!-- HOMEPAGE VEGE -->
+
+<!-- PHOTOGRAPHY -->
+        <div id="photojump"></div>
+        <div class="content-card photography">
+            <div id="portfolio-holder" class="portfoliotarolo">
+               <table>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td>
+                        <div class="portfoliocard season"><h3><br><br><br><br><br><br>This Season</h3></div>
+                    </td>
+                    <td></td>
+                    <td>
+                        <div class="portfoliocard portfolio" onclick="window.location.href='html/portfolio.html'"><h3><br><br><br><br><br><br>Portfolio</h3></div>
+                    </td>
+                    <td></td>
+                    <td>
+                        <div class="portfoliocard dump"><h3><br><br><br><br><br><br>Style Dump</h3></div>
+                    </td>
+                    <td></td>
+                    <td></td>
+                </tr>
+               </table>
+               <div class="button-holder portfoliovissza" onclick="gorduljfel()">
+                <i class="nyil" ></i>
+            </div>
+            </div>
+            <div class="portgomb">
+            <div class="portfoliogomb">
+                <button type="button" onclick="gorduljle()">Photography</button>
+            </div>
+            </div>    
+        </div>
+        
+<!-- PHOTOGRAPHY VEGE -->
+
+<!-- PROJECTS -->
+        <div class="content-card projects">
+           
+        </div>
+
+        <div class="content-card projects2">
+           
+        </div>
+<!-- PROJECTS VEGE -->
+
+<!-- ABOUT -->
+        
+        <div class="content-card about">
+           <img id="me" src="photos/me.jpg" alt="">
+        </div>
+<!-- ABOUT VEGE -->
+    </div>
+<!-- OLDAL TARTALOM VEGE -->
+
+<!-- JAVASCRIPT -->
+    <script>
+        window.onscroll = function() {scrollFunction()};
+        var magassag = screen.height / 1.4 ;
+
+        function scrollFunction() {
+            if (document.body.scrollTop > magassag || document.documentElement.scrollTop > magassag ) {
+                document.getElementById("navbar").style.top = "0";
+            } else {
+            document.getElementById("navbar").style.top = "-6%";
+            }
+        }
+
+        window.onbeforeunload = function () {
+            window.scrollTo(0, 0);
+        }
+
+        const portfoliotarolo = document.querySelector(".portfoliotarolo");
+        const portfoliogomb = document.querySelector(".portfoliogomb")
+        function gorduljle() {
+                    document.getElementById("photojump").scrollIntoView({behavior: 'smooth'});
+                    portfoliotarolo.style.overflow = "hidden";
+                    portfoliotarolo.style.opacity = "1";
+                    portfoliotarolo.style.display = "block";
+                    portfoliotarolo.style.visibility = "visible";
+                    portfoliotarolo.style.height = "100%";
+                    portfoliogomb.style.display = "none";
+                    portfoliogomb.style.visibility = "hidden";
+        }
+        function gorduljfel() {
+                    portfoliotarolo.style.height = "0px";
+                    portfoliotarolo.style.opacity = "0";
+                    portfoliotarolo.style.visibility = "hidden";
+                    portfoliogomb.style.display = "block";
+                    portfoliogomb.style.visibility = "visible";
+        }
+        function jumptophotography() {
+            document.getElementById("photojump").scrollIntoView({behavior: 'smooth'});
+        }
+
+    </script>
+<!-- JAVASCRIPT VEGE -->
+</body>
+</html>
