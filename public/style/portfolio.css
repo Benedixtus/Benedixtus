@@ -172,3 +172,44 @@ img {
     50% {transform: translateY(0) translateX(2.5vh); opacity: 1; letter-spacing: 6.5vh;}
     100% {transform: translateY(0) translateX(0); opacity: 1; letter-spacing: 1vh;}
 }
+@media screen and (max-width: 600px) {
+    .csempe-tarolo {
+        column-count: 1;
+        width: 90vw;
+        margin: 0 auto;
+    }
+    img {
+        width: 90vw;
+    }
+    #header {
+        margin: 0 auto;
+        padding: 18% 0;
+        
+        animation-duration: 0s;
+    }
+    #header h1 {
+        font-size: 300%;
+        margin-bottom: 2%;
+        animation-duration: 0s;
+        
+        position: absolute;
+        top: 7%;
+        left: 50%;
+        transform: translateX(-50%) translateY(-50%);
+    }
+    #header h2 {
+        animation-duration: 0s;
+        
+        position: absolute;
+        top: 12%;
+        left: 50%;
+        transform: translateX(-50%) translateY(-50%);
+    }
+    .megtekinto {
+        animation-duration: 0s;
+    }
+    .csempe-panel,
+    .csempe-panel * {
+        pointer-events: none !important;
+}
+}
