@@ -40,9 +40,9 @@ window.onscroll = function() {scrollFunction()};
         function jumptophotography() {
             document.getElementById("photojump").scrollIntoView({behavior: 'smooth'});
         }
-        var megnyilt = 0;
+        var megnyilt = false;
         function projectsopen() {
-            if(megnyilt == 0){
+            if(!megnyilt){
             document.getElementById("projectjump").scrollIntoView({behavior: 'smooth'});
             document.getElementById("projectbubbleholder").style.backgroundColor = "rgba(0,0,0,0.6)";
             document.getElementById("projectstext").style.animation = "none";
@@ -91,6 +91,46 @@ window.onscroll = function() {scrollFunction()};
                 document.getElementById("artbubble").style.transitionDelay = "0s";
                 document.getElementById("artbubble").style.transitionDuration = "0.5s";
             }, 2000);
-            megnyilt++;
+            megnyilt = true;
             }
+            else {
+                document.getElementById("designbubble").style.transitionDuration = "2s";
+                document.getElementById("designbubble").style.top = "50%";
+                document.getElementById("designbubble").style.left = "50%";
+
+                document.getElementById("progbubble").style.transitionDuration = "2s";
+                document.getElementById("progbubble").style.top = "50%";
+                document.getElementById("progbubble").style.left = "50%";
+
+                document.getElementById("gitbubble").style.transitionDuration = "2s";
+                document.getElementById("gitbubble").style.top = "50%";
+                document.getElementById("gitbubble").style.left = "50%";
+
+                document.getElementById("blogbubble").style.transitionDuration = "2s";
+                document.getElementById("blogbubble").style.top = "50%";
+                document.getElementById("blogbubble").style.left = "50%";
+
+                document.getElementById("litbubble").style.transitionDuration = "2s";
+                document.getElementById("litbubble").style.top = "50%";
+                document.getElementById("litbubble").style.left = "50%";
+
+                document.getElementById("artbubble").style.transitionDuration = "2s";
+                document.getElementById("artbubble").style.top = "50%";
+                document.getElementById("artbubble").style.left = "50%";
+
+                setTimeout(function(){
+                    document.getElementById("designbubble").style.opacity = "0";
+                    document.getElementById("progbubble").style.opacity = "0";
+                    document.getElementById("gitbubble").style.opacity = "0";
+                    document.getElementById("blogbubble").style.opacity = "0";
+                    document.getElementById("litbubble").style.opacity = "0";
+                    document.getElementById("artbubble").style.opacity = "0";
+                }, 450)
+
+                setTimeout(function(){
+                    document.getElementById("projectbubbleholder").style.backgroundColor = "rgba(0,0,0,0)";
+                }, 700)
+                megnyilt = false;
+            }
+
         }

@@ -25,7 +25,7 @@
 }
 
 #projectstext {
-    z-index: 8;
+    z-index: 1;
     height: 8vh;
     width: 8vh;
     position: absolute;
@@ -81,7 +81,7 @@
 }
 
 #projectbubbleholder {
-    z-index: 7;
+    z-index: 0;
     background-color: rgba(0, 0, 0, 0);
     height: 100%;
     width: 100%;
@@ -106,11 +106,9 @@
     transition-delay: 0.8s;
 }
 .bubble h4 {
-    padding: 0;
-    margin: 0;
-    text-align: center;
     transition: 0.5s;
-}
+    opacity: 0;
+ }
 .bubble:hover {
     width: 8vh;
     height: 8vh;
@@ -118,6 +116,25 @@
 }
 
 .bubble:hover h4 {
-    transform: rotate(10deg);
+    transform: translateX(170%) translateY(-15%);
     font-size: 150%;
+    opacity: 1;
+}
+.bleft:hover h4 {
+    transform: translateX(-300%) translateY(-15%);
+}
+
+.bubble img {
+    height:75%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    transition: 0.5s;
+}
+.bubble:hover img {
+    transform: translateX(-50%) translateY(-50%) rotate(20deg);
+}
+#litbubble  img{
+    height: 60%;
 }
