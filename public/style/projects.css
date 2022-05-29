@@ -41,6 +41,8 @@
     animation-duration: 2s;
     animation-iteration-count: infinite;
     transition: 0.2s;
+    cursor: url(cursor.cur), auto;
+    background-color: rgba(0,0,0,0.2);
 }
 #projectstext h3 {
     margin: 0;
@@ -103,6 +105,7 @@
     opacity: 0;
     transition: 0s;
     transition-delay: 0.8s;
+    cursor: url(cursor.cur), auto;
 }
 .bubble h4 {
     transition: 0.5s;

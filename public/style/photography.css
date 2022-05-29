@@ -77,8 +77,8 @@
     text-decoration: none;
     border-radius: 0;
     color: white;
-    border: 0.2vh solid darkgray;
-    background-color: gray;
+    border: 4px solid white;
+    background-color: rgba(0,0,0,0.6);
     height: 100%;
     width: 25vh;
     font-size: 4vh;

@@ -94,6 +94,9 @@ window.onscroll = function() {scrollFunction()};
             megnyilt = true;
             }
             else {
+                
+                document.getElementById("projectjump").scrollIntoView({behavior: 'smooth'});
+
                 document.getElementById("designbubble").style.transitionDuration = "2s";
                 document.getElementById("designbubble").style.top = "50%";
                 document.getElementById("designbubble").style.left = "50%";
