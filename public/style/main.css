@@ -2,6 +2,7 @@ body {
     height: 96%;
     margin:0;
     background-color: black;
+    cursor: url(cursor.cur);
 }
 .content-wrapper {
     margin-top: 2.5vh;
@@ -32,4 +33,11 @@ body {
     width:100%; 
     background-color: black; 
     z-index: 1;
+}
+h1, h2 {
+    cursor: default;
+}
+
+a[href], a[onclick], input[type='submit'], input[type='image'], label[for], select, button, .pointer {
+    cursor: url(cursor.cur), auto;
 }

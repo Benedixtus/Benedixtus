@@ -136,3 +136,44 @@ td a {
     vertical-align: middle;
     font-family: 'EB Garamond', serif;
 }
+#arrow-holder {
+  z-index: 0;
+  height: 4vh;
+  width: 4vh;
+  position: absolute;
+  bottom: 10%;
+  left: 50%;
+  transform:scale(140%,80%);
+  animation-name: arrowdown;
+  animation-duration: 6s;
+  transition: 0.5s;
+}
+#arrowdown {
+  transform: rotate(45deg);
+  height: 100%;
+  width: 100%;
+  border-bottom: 4px solid white;
+  border-right: 4px solid white;
+}
+
+#arrow-holder:hover {
+  transform: scale(160%, 200%) translateY(5%);
+  opacity: 0.8;
+}
+
+/* Chrome, Safari, Opera */
+@-webkit-keyframes arrowdown {
+  0% {opacity: 0; transform:scale(140%,80%) translateY(-15vh);}
+  50% {opacity: 0; transform:scale(140%,80%) translateY(-15vh);}
+  80% {transform:scale(140%,80%) translateY( 0vh);}
+  100% {opacity: 1;transform:scale(140%,80%) translateY( 0vh);}
+
+}
+
+/* Standard syntax */
+@keyframes arrowdown {
+  0% {opacity: 0; transform:scale(140%,80%) translateY(-15vh);}
+  50% {opacity: 0; transform:scale(140%,80%) translateY(-15vh);}
+  80% {transform:scale(140%,80%) translateY( 0vh);}
+  100% {opacity: 1;transform:scale(140%,80%) translateY( 0vh);}
+}

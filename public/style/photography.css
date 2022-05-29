@@ -131,3 +131,25 @@
     background-position: center;
     background-size: cover;
 }
+
+#arrow-holder-up {
+    height: 4vh;
+    width: 4vh;
+    position: absolute;
+    bottom: 10%;
+    left: 50%;
+    transform:scale(160%,80%);
+    transition: 0.5s;
+  }
+  #arrowup {
+    transform: rotate(-135deg);
+    height: 100%;
+    width: 100%;
+    border-bottom: 4px solid lightgray;
+    border-right: 4px solid lightgray;
+  }
+  
+  #arrow-holder-up:hover {
+    transform: scale(80%, 200%) translateY(5%);
+    opacity: 0.8;
+  }

@@ -2,9 +2,122 @@
     background-image: url(../photos/background/projects.jpg);
     background-position: center;
     background-size: cover;
+    background-blend-mode:difference;
 }
 .projects2 {
     background-image: url(../photos/background/projects2.png);
     background-position: center;
     background-size: cover;
+}
+.projects {
+    position: relative;
+}
+#projectjump {
+    position: absolute;
+    top: -6%;
+}
+.projects2 {
+    position: relative;
+}
+#project2jump {
+    position: absolute;
+    top: -6%;
+}
+
+#projectstext {
+    z-index: 8;
+    height: 8vh;
+    width: 8vh;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: scale(100%) translateX(-50%) translateY(-50%);
+    font-size: 150%;
+    color: white;
+    border: 6px solid white;
+    padding: 2%;
+    border-radius: 50%;
+    animation-name: pulzalas;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    transition: 0.2s;
+}
+#projectstext h3 {
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    font-size: 125%;
+    transition: 0.2s;
+}
+
+/* Chrome, Safari, Opera */
+@-webkit-keyframes pulzalas {
+    0% {transform: scale(100%);}
+    50% {transform: scale(120%);}
+    100% {transform: scale(100%);}
+  }
+  
+  /* Standard syntax */
+  @keyframes pulzalas {
+    0% {box-shadow: 0 0 -10px -10px white; color: white;}
+    25% {box-shadow: 0 0 -10px -10px white; color: rgb(223, 223, 223);}
+    50% {box-shadow: 0 0 100px -10px white; color:rgb(223, 223, 223);}
+    75% {box-shadow: 0 0 -10px -10px white; color: white;}
+    100% {box-shadow: 0 0 -10px  -10px white; color: white;}
+}
+
+#projectstext:hover {
+    width: 10vh;
+    height: 10vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    animation: none;
+}
+#projectstext:hover h3 {
+    transform: rotate(10deg) translateX(-50%) translateY(-30%);
+    font-size: 150%;
+}
+
+#projectbubbleholder {
+    z-index: 7;
+    background-color: rgba(0, 0, 0, 0);
+    height: 100%;
+    width: 100%;
+    transition: 1s;
+    position: relative;
+}
+
+.bubble {
+    width: 6vh;
+    height: 6vh;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    font-size: 150%;
+    color: white;
+    border: 6px solid white;
+    border-radius: 50%;
+    padding: 2%;
+    opacity: 0;
+    transition: 0s;
+    transition-delay: 0.8s;
+}
+.bubble h4 {
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    transition: 0.5s;
+}
+.bubble:hover {
+    width: 8vh;
+    height: 8vh;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.bubble:hover h4 {
+    transform: rotate(10deg);
+    font-size: 150%;
 }

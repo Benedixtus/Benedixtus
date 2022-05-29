@@ -10,7 +10,7 @@
 <body>
     <div id="header">
         <div id="mozgodiv">
-        <h1>Benedixtus</h1>
+        <a href="../index.html"><h1>Benedixtus</h1></a>
         <h2>portfolio</h2>
         <h3> * My real portfolio is under construction, this is just a placeholder with some pictures taken randomly from my older portfolio *</h3>
         </div>
@@ -145,7 +145,12 @@
     </div>
     <script>
 
-        
+        const testFolder = './photos/portfolio/';
+        const fs = require('fs');
+
+        fs.readdirSync(testFolder).forEach(file => {
+        console.log(file);
+        });
 
         const csempetarolo = document.querySelector(".csempe-tarolo");
         const megtekinto = document.querySelector(".megtekinto");

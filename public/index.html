@@ -26,7 +26,7 @@
             <table>
             <tr>
                 <td>
-                    <a href="">Benedixtus</a>
+                    <a onclick="mozgas('homejump')">Benedixtus</a>
                 </td>
                 <td id="navhely">
                 </td>
@@ -34,10 +34,10 @@
                     <a onclick="gorduljle()">Photography</a>
                 </td>
                 <td>
-                    <a href="">Projects</a>
+                    <a onclick="mozgas('projectjump')">Projects</a>
                 </td>
                 <td>
-                    <a href="">About</a>
+                    <a onclick="mozgas('aboutjump')">About</a>
                 </td>
             </tr>
             </table>
@@ -48,11 +48,13 @@
 <!-- OLDAL TARTALOM -->
     <div class="content-wrapper">
 <!-- HOMEPAGE -->
+        <div id="homejump"></div>
         <div class="content-card homepage">
           <div class="ablak">  
           </div>
           <h1>Benedixtus</h1>
           <h2>Photography - Design - Programming</h2>
+          <div id="arrow-holder"><div id="arrowdown" onclick="mozgas('photojump')"></div></div>
         </div>
 <!-- HOMEPAGE VEGE -->
 
@@ -80,34 +82,38 @@
                 </tr>
                </table>
                <div class="button-holder portfoliovissza" onclick="gorduljfel()">
-                <i class="nyil" ></i>
+                <div id="arrow-holder-up"><div id="arrowup"></div></div>
             </div>
             </div>
             <div class="portgomb">
             <div class="portfoliogomb">
                 <button type="button" onclick="gorduljle()">Photography</button>
             </div>
-            </div>    
+            </div>
         </div>
         
 <!-- PHOTOGRAPHY VEGE -->
 
 <!-- PROJECTS -->
         <div class="content-card projects">
-           <div id="kartya-tarolo">
-                <div class="kartya">
-                    
-                </div>               
-                <div class="kartya">
+            <div id="projectjump"></div>
+                <div id="projectstext" onclick="projectsopen()">
+                    <h3>Projects</h3>
+                </div>
+                <div id="projectbubbleholder">
+                    <div class="bubble" id="designbubble" style="top:50%; left: 50%"><h4>Design</h4></div>
+                    <div class="bubble" id="progbubble"style="top:50%; left: 50%"><h4>Programming</h4></div>
+                    <div class="bubble" id="gitbubble"style="top:50%; left: 50%"><h4>GitHub</h4></div>
+                    <div class="bubble" id="blogbubble"style="top:50%; left: 50%"><h4>Blog</h4></div>
+                    <div class="bubble" id="litbubble"style="top:50%; left: 50%"><h4>Literature</h4></div>
+                    <div class="bubble" id="artbubble"style="top:50%; left: 50%"><h4>Art</h4></div>
 
                 </div>
-                <div class="kartya">
-
-                </div>
-           </div>
         </div>
 
+
         <div class="content-card projects2">
+            <div id="project2jump"></div>
            
         </div>
 <!-- PROJECTS VEGE -->
@@ -115,6 +121,7 @@
 <!-- ABOUT -->
         
         <div class="content-card about">
+            <div id="aboutjump"></div>
            <img id="me" src="photos/me.jpg" alt="">
         </div>
 <!-- ABOUT VEGE -->
@@ -124,10 +131,10 @@
 <!-- JAVASCRIPT -->
     <script>
         window.onscroll = function() {scrollFunction()};
-        var magassag = screen.height / 1.4 ;
+        var navmagassag = screen.height / 1.4 ;
 
         function scrollFunction() {
-            if (document.body.scrollTop > magassag || document.documentElement.scrollTop > magassag ) {
+            if (document.body.scrollTop > navmagassag || document.documentElement.scrollTop > navmagassag ) {
                 document.getElementById("navbar").style.top = "0";
             } else {
             document.getElementById("navbar").style.top = "-6%";
@@ -140,6 +147,11 @@
 
         const portfoliotarolo = document.querySelector(".portfoliotarolo");
         const portfoliogomb = document.querySelector(".portfoliogomb")
+
+        function mozgas(a) {
+            console.log("lefut");
+            document.getElementById(a).scrollIntoView({behavior: 'smooth'});
+        }
         function gorduljle() {
                     document.getElementById("photojump").scrollIntoView({behavior: 'smooth'});
                     portfoliotarolo.style.overflow = "hidden";
@@ -160,7 +172,60 @@
         function jumptophotography() {
             document.getElementById("photojump").scrollIntoView({behavior: 'smooth'});
         }
+        var megnyilt = 0;
+        function projectsopen() {
+            if(megnyilt == 0){
+            document.getElementById("projectjump").scrollIntoView({behavior: 'smooth'});
+            document.getElementById("projectbubbleholder").style.backgroundColor = "rgba(0,0,0,0.6)";
+            document.getElementById("projectstext").style.animation = "none";
 
+            document.getElementById("designbubble").style.opacity = "1";
+            document.getElementById("designbubble").style.transitionDuration = "2s";
+            document.getElementById("designbubble").style.top = "25%";
+            document.getElementById("designbubble").style.left = "20%";
+
+            document.getElementById("progbubble").style.opacity = "1";
+            document.getElementById("progbubble").style.transitionDuration = "2s";
+            document.getElementById("progbubble").style.top = "50%";
+            document.getElementById("progbubble").style.left = "20%";
+
+            document.getElementById("gitbubble").style.opacity = "1";
+            document.getElementById("gitbubble").style.transitionDuration = "2s";
+            document.getElementById("gitbubble").style.top = "75%";
+            document.getElementById("gitbubble").style.left = "20%";
+
+            document.getElementById("blogbubble").style.opacity = "1";
+            document.getElementById("blogbubble").style.transitionDuration = "2s";
+            document.getElementById("blogbubble").style.top = "25%";
+            document.getElementById("blogbubble").style.left = "80%";
+            
+            document.getElementById("litbubble").style.opacity = "1";
+            document.getElementById("litbubble").style.transitionDuration = "2s";
+            document.getElementById("litbubble").style.top = "50%";
+            document.getElementById("litbubble").style.left = "80%";
+
+            document.getElementById("artbubble").style.opacity = "1";
+            document.getElementById("artbubble").style.transitionDuration = "2s";
+            document.getElementById("artbubble").style.top = "75%";
+            document.getElementById("artbubble").style.left = "80%";
+
+            setTimeout(function() {
+                document.getElementById("designbubble").style.transitionDelay = "0s";
+                document.getElementById("designbubble").style.transitionDuration = "0.5s";
+                document.getElementById("progbubble").style.transitionDelay = "0s";
+                document.getElementById("progbubble").style.transitionDuration = "0.5s";
+                document.getElementById("gitbubble").style.transitionDelay = "0s";
+                document.getElementById("gitbubble").style.transitionDuration = "0.5s";
+                document.getElementById("blogbubble").style.transitionDelay = "0s";
+                document.getElementById("blogbubble").style.transitionDuration = "0.5s";
+                document.getElementById("litbubble").style.transitionDelay = "0s";
+                document.getElementById("litbubble").style.transitionDuration = "0.5s";
+                document.getElementById("artbubble").style.transitionDelay = "0s";
+                document.getElementById("artbubble").style.transitionDuration = "0.5s";
+            }, 2000);
+            megnyilt++;
+            }
+        }
     </script>
 <!-- JAVASCRIPT VEGE -->
 </body>
