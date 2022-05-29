@@ -86,7 +86,6 @@
     height: 100%;
     width: 100%;
     transition: 1s;
-    position: relative;
 }
 
 .bubble {
@@ -107,7 +106,7 @@
 }
 .bubble h4 {
     transition: 0.5s;
-    opacity: 0;
+    opacity: 1;
  }
 .bubble:hover {
     width: 8vh;
@@ -115,13 +114,8 @@
     background-color: rgba(0, 0, 0, 0.5);
 }
 
-.bubble:hover h4 {
-    transform: translateX(170%) translateY(-15%);
-    font-size: 150%;
-    opacity: 1;
-}
-.bleft:hover h4 {
-    transform: translateX(-300%) translateY(-15%);
+.bleft:hover img {
+    transform: translateX(-50%) translateY(-50%) rotate(-20deg);
 }
 
 .bubble img {
@@ -132,9 +126,30 @@
     transform: translateX(-50%) translateY(-50%);
     transition: 0.5s;
 }
-.bubble:hover img {
+.bright:hover img {
     transform: translateX(-50%) translateY(-50%) rotate(20deg);
 }
 #litbubble  img{
     height: 60%;
+}
+
+.szoveg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    opacity: 0;
+    transform: translateY(-50%);
+    transition: 0.5s;
+}
+.bal {
+    left: 0;
+}
+.bright:hover .szoveg {
+    left: 120%;
+    opacity: 1;
+}
+.bleft:hover .szoveg {
+    left: -50%;
+    transform: translateX(-80%) translateY(-50%);
+    opacity: 1;
 }
