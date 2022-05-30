@@ -13,7 +13,8 @@
 
 
     <script>
-        var photoarray = [
+        var photoarray = [  "ben_2015_02_01_110441.jpg",
+                            "ben_2015_06_29_154124.jpg",
                             "ben_2015_07_11_212546.jpg",
                             "ben_2015_07_13_100748.jpg",
                             "ben_2015_07_13_103624.jpg",
@@ -82,15 +83,14 @@
                             "ben_2020_06_10_162648.jpg",
                             "ben_2020_07_23_150810.jpg",
                             "ben_2020_10_17_140918.jpg",
-                            "ben_2020_10_17_140935.jpg",
-                            ];
+                            "ben_2020_10_17_140935.jpg"  ];
 
 
         function datummaker(){
             pagecode += '<div class="season" ><h1>' + datumkiir() +'</h1>';
         }
         function imgmaker(i) {
-            pagecode += '<img src="sample/'+ photoarray[i-1]+'" style="width: 20%;"></img>';
+            pagecode += '<img src="sample/'+ photoarray[i]+'" style="width: 20%;"></img>';
         }
         function evszak(str,a,b) {
             var month = parseInt(str.substr(a,b));
@@ -125,13 +125,12 @@
                 lastseason = photoarray[i];
                 datumkiir();
                 datummaker();
-                console.log(photoarray[i]);
+                imgmaker(i);
                 if(!lastseason == ""){
                     pagecode += "</div>";
                 }
                 
             }else {
-                console.log(photoarray[i]);
                 imgmaker(i);
             }
         }
