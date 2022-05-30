@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="content">
+
+    </div>
+
+
+    <script>
+        var photoarray = [
+                            "ben_2015_07_11_212546.jpg",
+                            "ben_2015_07_13_100748.jpg",
+                            "ben_2015_07_13_103624.jpg",
+                            "ben_2015_07_13_104507.jpg",
+                            "ben_2015_07_13_104527.jpg",
+                            "ben_2015_07_13_121939.jpg",
+                            "ben_2015_07_13_122046.jpg",
+                            "ben_2015_07_13_122138.jpg",
+                            "ben_2015_07_13_122320.jpg",
+                            "ben_2015_07_13_122331.jpg",
+                            "ben_2015_07_13_122750.jpg",
+                            "ben_2015_07_13_122836.jpg",
+                            "ben_2015_07_13_122841.jpg",
+                            "ben_2015_07_13_123116.jpg",
+                            "ben_2015_08_10_194548.jpg",
+                            "ben_2015_09_06_144155.jpg",
+                            "ben_2015_09_11_172703.jpg",
+                            "ben_2016_08_12_121601.jpg",
+                            "ben_2016_10_02_172355.jpg",
+                            "ben_2016_10_22_161304.jpg",
+                            "ben_2016_10_22_162718-2.jpg",
+                            "ben_2016_10_22_162718.jpg",
+                            "ben_2016_10_22_172630.jpg",
+                            "ben_2017_07_10_121542.jpg",
+                            "ben_2017_07_12_202703.jpg",
+                            "ben_2017_10_07_160229.jpg",
+                            "ben_2017_10_07_161735.jpg",
+                            "ben_2018_08_10_162321.jpg",
+                            "ben_2018_08_10_162432.jpg",
+                            "ben_2018_08_16_174307.jpg",
+                            "ben_2018_08_27_154559.jpg",
+                            "ben_2018_08_27_155311.jpg",
+                            "ben_2018_10_29_155102.jpg",
+                            "ben_2019_02_01_110529.jpg",
+                            "ben_2019_05_07_104345.jpg",
+                            "ben_2019_06_01_122944.jpg",
+                            "ben_2019_06_13_145059.jpg",
+                            "ben_2019_06_13_145111.jpg",
+                            "ben_2019_06_27_110333.jpg",
+                            "ben_2019_07_04_101641.jpg",
+                            "ben_2019_07_19_140919.jpg",
+                            "ben_2019_07_31_221356.jpg",
+                            "ben_2019_08_01_070316.jpg",
+                            "ben_2019_10_09_173458.jpg",
+                            "ben_2019_10_09_173554.jpg",
+                            "ben_2019_10_19_162014.jpg",
+                            "ben_2020_03_07_114306.jpg",
+                            "ben_2020_03_20_191927.jpg",
+                            "ben_2020_03_20_191936.jpg",
+                            "ben_2020_03_20_192014.jpg",
+                            "ben_2020_03_20_192411.jpg",
+                            "ben_2020_03_20_192437.jpg",
+                            "ben_2020_03_20_192452-2.jpg",
+                            "ben_2020_03_20_192452.jpg",
+                            "ben_2020_03_20_193006.jpg",
+                            "ben_2020_03_20_193030.jpg",
+                            "ben_2020_03_20_193103.jpg",
+                            "ben_2020_03_20_193143.jpg",
+                            "ben_2020_03_20_193539.jpg",
+                            "ben_2020_03_20_193603.jpg",
+                            "ben_2020_03_20_193922.jpg",
+                            "ben_2020_04_22_234034.jpg",
+                            "ben_2020_04_22_234149.jpg",
+                            "ben_2020_04_22_234219.jpg",
+                            "ben_2020_04_22_234328.jpg",
+                            "ben_2020_06_10_162648.jpg",
+                            "ben_2020_07_23_150810.jpg",
+                            "ben_2020_10_17_140918.jpg",
+                            "ben_2020_10_17_140935.jpg",
+                            ];
+
+
+        function datummaker(){
+            pagecode += '<div class="season" ><h1>' + datumkiir() +'</h1>';
+        }
+        function imgmaker(i) {
+            pagecode += '<img src="sample/'+ photoarray[i-1]+'" style="width: 20%;"></img>';
+        }
+        function evszak(str,a,b) {
+            var month = parseInt(str.substr(a,b));
+            if(month < 3 || month == 12) {
+                 return "Winter";
+            }else if(month < 6) {
+                return "Spring";
+            }else if(month < 9){
+                return "Summer";
+            }else if(month < 11){
+                return "Autumn";
+            }
+        }
+        function datumkiir() {
+            console.log(evszak(lastseason,9,2)+ " of " +lastseason.substr(4,4)  );
+            return (evszak(lastseason,9,2)+ " of " +lastseason.substr(4,4)  );
+        }
+        function sameseason(a,b) {
+            if(a.substr(5,4) == b.substr(5,4) && evszak(a,9,2)==evszak(b,9,2)) {
+                return true;
+            }else{ return false}
+        }
+
+
+        var pagecode = "";
+        var lastseason = "";
+        
+
+        for(var  i = 0; i < photoarray.length; i++){
+            var bool = sameseason(lastseason, photoarray[i]);
+            if(!bool){
+                lastseason = photoarray[i];
+                datumkiir();
+                datummaker();
+                console.log(photoarray[i]);
+                if(!lastseason == ""){
+                    pagecode += "</div>";
+                }
+                
+            }else {
+                console.log(photoarray[i]);
+                imgmaker(i);
+            }
+        }
+        console.log(pagecode);
+        document.getElementById("content").innerHTML = pagecode;
+       
+    </script>
+</body>
+</html>
