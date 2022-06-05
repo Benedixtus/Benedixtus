@@ -7,7 +7,7 @@ body {
 .csempe-tarolo {
     column-count: 3;
     column-gap: 0;
-    width: 62vw;
+    width: 80vw;
     margin: 0 auto;
     z-index: 2;
     margin-top: 2vh;
@@ -20,7 +20,7 @@ body {
     z-index: 100;
 }
 img {
-    width: 20vw;
+    width: 26vw;
     transition: 0.3s;
 }
 .csempe-panel:hover {

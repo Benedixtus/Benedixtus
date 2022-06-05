@@ -1,3 +1,9 @@
+body {
+    background-color: green;
+    overflow-x: hidden;
+    overflow-y: auto;
+    position: auto;
+}
 #content {
     background-color: #e6ad67;
     width: 80%;
@@ -5,24 +11,31 @@
     margin: 0 auto;
 }
 .season {
-    border: 2px solid red;
-    display: flex;
-    flex-wrap: wrap;
-    align-content: flex-end;
-
+    column-count: 3;
+    column-gap: 0;
+    width: 100%;
+    margin: 0 auto;
+    z-index: 2;
+    margin-top: 2vh;
 }
-#content h1 {
-    color: white;
+.csempe-panel {
+    width: 100%;
+    break-inside: avoid;
+    padding: 0.25vw 0;
+    transition: 1s;
+    z-index: 100;
+}
+.kep {
+    width: 95%;
+}
+.seasoncim {
     font-family: 'EB Garamond';
     padding: 0;
-    margin: 0;
-    margin-bottom: 3%;
-    width:100%;
+    color: white;
+    font-size: 2.5rem;
+    width: 100%;
+    text-align: center;
 }
-img {
-    flex-grow: 2;
-}
-
 img:nth-child(3n-2) {
     border: 3px solid red;
     

@@ -4,10 +4,10 @@
 
 
         function datummaker(){
-            pagecode += '<div class="season" ><h1>' + datumkiir() +'</h1>';
+            pagecode += '<h1 class="seasoncim">' + datumkiir() +'</h1><div class="season" >';
         }
         function imgmaker(i) {
-            pagecode += '<img src="sample/'+ diaryarray[i]+'" style="width: 20%;"></img>';
+            pagecode += '<div class="csempe-panel" id="d1"><img class="kep" src="sample/'+ diaryarray[i]+'"></img></div>';
         }
         function evszak(str,a,b) {
             var month = parseInt(str.substr(a,b));
