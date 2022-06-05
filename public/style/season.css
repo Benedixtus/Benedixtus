@@ -1,0 +1,35 @@
+#content {
+    background-color: #e6ad67;
+    width: 80%;
+    border: 2px solid #c39052;
+    margin: 0 auto;
+}
+.season {
+    border: 2px solid red;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-end;
+
+}
+#content h1 {
+    color: white;
+    font-family: 'EB Garamond';
+    padding: 0;
+    margin: 0;
+    margin-bottom: 3%;
+    width:100%;
+}
+img {
+    flex-grow: 2;
+}
+
+img:nth-child(3n-2) {
+    border: 3px solid red;
+    
+}
+img:nth-child(3n-1) {
+    border: 2px solid blue;
+}
+img:nth-child(3n) {
+    border: 2px solid green;
+}
