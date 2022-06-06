@@ -1,13 +1,12 @@
 body {
-    background-color: green;
+    background-color: gray;
     overflow-x: hidden;
     overflow-y: auto;
     position: auto;
 }
 #content {
-    background-color: #e6ad67;
+    background-color: gray;
     width: 80%;
-    border: 2px solid #c39052;
     margin: 0 auto;
 }
 .season {
@@ -35,14 +34,4 @@ body {
     font-size: 2.5rem;
     width: 100%;
     text-align: center;
-}
-img:nth-child(3n-2) {
-    border: 3px solid red;
-    
-}
-img:nth-child(3n-1) {
-    border: 2px solid blue;
-}
-img:nth-child(3n) {
-    border: 2px solid green;
 }
