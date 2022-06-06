@@ -4,6 +4,16 @@ body {
     overflow-y: auto;
     position: auto;
 }
+#header {
+    margin: 0 auto;
+    background-color: aqua;
+    width: 80%;
+    height: 15vh;
+
+}
+#header-cim {
+    
+}
 #content {
     background-color: gray;
     width: 80%;
