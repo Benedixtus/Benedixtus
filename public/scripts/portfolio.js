@@ -21,5 +21,5 @@
             megtekinto.style.opacity = '0';
             document.body.style.position = "auto";
             document.getElementById("valtozo").src="";
-            setTimeout("megtekinto.style.display = 'none';",1000);
+            megtekinto.style.display = 'none';
         }

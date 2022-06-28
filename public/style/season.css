@@ -151,3 +151,9 @@ a {
     100% {padding: 3vh 0;}
 }
   
+#back-benedixtus {
+    color: white;
+    position: absolute;
+    top: 20%;
+    transform: translateY(-50%) translateX(25%);
+}
