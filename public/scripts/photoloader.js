@@ -7,7 +7,8 @@
             pagecode += '<h1 class="seasoncim">' + datumkiir() +'</h1><div class="season" >';
         }
         function imgmaker(i) {
-            pagecode += '<div class="csempe-panel"><img onclick="mutat(' + i +')" class="kep" src="../photos/season_sample/'+ diaryarray[i]+'_s.jpg"></img></div>';
+            var image = "'" + diaryarray[i].toString() + "'";
+            pagecode += '<div class="csempe-panel"><img onclick="nagyitdia(' + image + ')" class="kep" src="../photos/season_sample/'+ diaryarray[i]+'_s.jpg"></img></div>';
         }
         function evszak(str,a,b) {
             var month = parseInt(str.substr(a,b));
