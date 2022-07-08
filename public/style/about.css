@@ -24,6 +24,7 @@
     background-color: rgba(50,50,50,0.3);
     width: 40%;
     margin: 0 auto;
+    position: relative;
 
 }
 
@@ -39,29 +40,25 @@
 }
 #what-i-can-do {
     color: white;
-    width: fit-content;
-    background-color: rgba(255,255,255, 0.3);
-    border-radius: 15px;
-    padding: 5px 15px;
-    display: inline;
-    float: left;
+    width: 45%;
+    background-color: green;;
+    position:absolute;
+    left: 0%;
 }
 
 #boringcv {
     color: white;
-    width: fit-content;
-    background-color: rgba(255,255,255, 0.3);
-    border-radius: 15px;
-    padding: 5px 15px;
-    display: inline;
-    float: left;
+    width: 45%;
+    position: absolute;
+    right: 0%;
 }
 #socials {
-    color: white;
-    font-size: 170%;
-    background-color:rgba(255, 255, 255, 0.5);
-    width: 20%;
+
+
+}
+#cvk {
+    background-color: pink;
     height: 4%;
+    width: 75%;
     margin: 0 auto;
-    padding: 0;
 }
