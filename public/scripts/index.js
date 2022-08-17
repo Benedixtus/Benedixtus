@@ -137,3 +137,23 @@ window.onscroll = function() {scrollFunction()};
             }
 
         }
+var cvopenv = 0;
+function cvopen() {
+    if(cvopenv == 0) {
+        cvopenv = 1;
+        document.getElementById("cv").style.height = "14%"; 
+        document.getElementById("cv").style.backgroundColor = "rgba(100,100,100,0.5)";
+        document.getElementById("interesting").style.opacity = 1;
+        document.getElementById("boring").style.opacity = 1;
+        document.getElementById("interesting").style.transition = "1.2s";
+        document.getElementById("boring").style.transition = "1.2s";
+    } 
+    else {
+        cvopenv = 0;
+        document.getElementById("cv").style.height = "5%";
+        document.getElementById("cv").style.backgroundColor = "rgba(0,0,0,0)";
+        document.getElementById("interesting").style.opacity = 0;
+        document.getElementById("boring").style.opacity = 0;
+        document.getElementById("interesting").style.transition = "0.3s";
+        document.getElementById("boring").style.transition = "0.3s";};
+}

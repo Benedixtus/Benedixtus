@@ -3,6 +3,7 @@ body {
     margin:0;
     background-color: black;
     cursor: url(cursor.cur);
+    overflow-x: hidden;
 }
 .content-wrapper {
     margin-top: 2.5vh;

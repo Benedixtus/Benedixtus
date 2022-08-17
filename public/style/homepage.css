@@ -177,3 +177,23 @@ td a {
   80% {transform:scale(140%,80%) translateY( 0vh);}
   100% {opacity: 1;transform:scale(140%,80%) translateY( 0vh);}
 }
+.note {
+
+}
+
+#note-1 {
+  position: absolute;
+  top: 120%;
+  right: -10%;
+  height: 60%;
+  width: 15%;
+  transform: rotate(5deg);
+  background-color: gray;
+  box-shadow: 5px 5px black;
+  transition: 1s;
+}
+
+#note-1:hover {
+  right: 0%;
+  transform: rotate(20deg); 
+}
