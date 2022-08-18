@@ -183,7 +183,7 @@ td a {
 
 #note-1 {
   position: absolute;
-  top: 120%;
+  top: 125%;
   right: -10%;
   height: 60%;
   width: 15%;
@@ -195,5 +195,14 @@ td a {
 
 #note-1:hover {
   right: 0%;
-  transform: rotate(20deg); 
+  transform: rotate(-3deg) translateX(-18%); 
+}
+#note-1-title {
+    position: absolute;
+    top: 122%;
+    left: 5%;
+}
+
+#note-1-title h1 {
+  font-size: 300%;
 }

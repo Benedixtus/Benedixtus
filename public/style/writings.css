@@ -1,0 +1,53 @@
+body {
+    overflow: hidden;
+    background-color: black;
+}
+#hatter {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: black;
+    color: white;
+    font-size: 75%;
+    font-family: Garamond;
+    animation-name: haha;
+    animation-duration: 6s;
+    text-align: justify;
+    margin: 0;
+    padding: 0;
+    z-index: 0;
+    opacity: 1;
+}
+@keyframes haha {
+    0% {opacity: 0; font-size: 1300%; width: 10%; height: 20%; top: 40%; left: 45%;}
+    50% {opacity: 1;}
+    100% {font-size: 75%;  width: 100%; height:100%; top: 0%; left: 0%;}
+  }
+
+ #felirat {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    font-size: 2500%;
+    color: black;
+    font-weight: 700;
+    z-index: 1;
+  }
+
+@media only screen and (max-width: 600px) {
+    body {
+    }
+    #hatter {
+        font-size: 25%;
+    }
+    @keyframes haha {
+        0% {font-size: 1300%; width: 10%; height: 20%; top: 40%; left: 20%;}
+        100% {font-size: 25%;  width: 100%; height:100%; top: 0%; left: 0%;}
+    }
+    #felirat {
+        font-size: 600%;
+    }
+}
