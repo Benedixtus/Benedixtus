@@ -157,3 +157,8 @@ function cvopen() {
         document.getElementById("interesting").style.transition = "0.3s";
         document.getElementById("boring").style.transition = "0.3s";};
 }
+
+function hahaha() {
+    console.log("lefut");
+    document.getElementById('mobile-nav-opened').style.display = "block";
+}

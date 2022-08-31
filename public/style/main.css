@@ -42,3 +42,93 @@ h1, h2 {
 a[href], a[onclick], input[type='submit'], input[type='image'], label[for], select, button, .pointer {
     cursor: url(cursor.cur), auto;
 }
+
+#mobile-nav {
+    display: none;
+}
+
+#mobile-nav-opened {
+    display: none;
+}
+
+/*  MOBILE */ 
+
+@media only screen and (max-width: 600px) {
+    html {
+        width: 100vw;
+    }
+    body {
+        width: 100vw;
+    }
+    .content-card {
+        height: 100vh;
+        margin-bottom: 10px;
+        background-color: black;   
+    }
+.content-wrapper {
+    margin-top: 0vh;
+    margin-left: 0vh;
+    margin-right: 0vh;
+}
+    #header {
+        display: none;
+    }
+    
+    #footer {
+        height: 10px;
+    }
+    #mobile-nav {
+        display: inline;
+        position: absolute;
+        top: 35px;
+        right: 35px;
+        z-index: 1;
+        
+        animation-name: besurran;
+        animation-duration: 2s;
+    }
+    #mobile-nav-button {
+        height: 30px;
+        width: 30px;
+    }
+    #mobile-nav-opened {
+        background-color: gray;
+        position: absolute;
+        width: 95vw;
+        height: 100vh;
+        top: -25px;
+        right: -25px;
+        padding-left: 0vw;
+        box-sizing: border-box;
+        z-index: 1;
+        padding: 20vh 10vw;
+
+        
+        animation-name: sirrisurran;
+        animation-duration: 1.2s;
+    }
+    #mobile-nav-item:first-child {
+        font-weight:bolder;
+        
+    }
+    #mobile-nav-item {
+        font-size: 250%;
+        margin-bottom: 12%;
+        text-align: right;
+        color: white;
+    }
+    
+    /* Standard syntax */
+    @keyframes besurran {
+        0% {top: -200px;}
+        70% {top: -200px;}
+        100% {top: 0s;}
+    }
+    
+    /* Standard syntax */
+    @keyframes sirrisurran {
+        0% {right: -100vw;}
+        70% {right: -100px;}
+        100% {right: -25px;}
+    }
+}

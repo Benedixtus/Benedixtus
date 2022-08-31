@@ -52,3 +52,11 @@
     padding:  2% 10%;
     
 }
+
+/*  MOBILE */ 
+
+@media only screen and (max-width: 600px) {
+    #me {
+        width: 20vw;
+    }
+}

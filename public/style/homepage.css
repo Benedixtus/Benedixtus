@@ -206,3 +206,77 @@ td a {
 #note-1-title h1 {
   font-size: 300%;
 }
+
+/*  MOBILE */ 
+
+@media only screen and (max-width: 600px) {
+  body {
+    width: 100vw;
+    box-sizing: border-box;
+    padding: 10px;
+  
+  }
+  .homepage {
+    height: 100vh;
+  }
+  h1 {
+    transform: translateY(-60vh);
+    font-size: 6vh;
+    z-index: 0;
+    }
+    @-webkit-keyframes elotunes {
+      0% {opacity: 0; transform: translateY(-100vh);}
+      100% {opacity: 1; transform: translateY(-60vh);}
+    
+    }
+    
+    /* Standard syntax */
+    @keyframes elotunes {
+      0% {opacity: 0; transform: translateY(-100vh);}
+      100% {opacity: 1; transform: translateY(-60vh);}
+    }
+  h2 {
+  transform: translateY(-65vh);
+  font-size: 1.75vh;
+  letter-spacing: 0vh;
+  }
+  /* Chrome, Safari, Opera */
+@-webkit-keyframes hover_down {
+  0% {opacity: 0;}
+  30% {opacity: 0; transform: translateY(-60vh);} 
+  100% {opacity: 1;transform: translateY(-65vh)}
+
+}
+
+/* Standard syntax */
+@keyframes hover_down {
+  0% {opacity: 0;}
+  30% {opacity: 0; transform: translateY(-60vh);} 
+  100% {opacity: 1;transform: translateY(-65vh)}
+}
+#navbar {
+  display: none;
+}
+#arrowdown {
+  display: none;
+}
+
+.ablak {
+  visibility: hidden;
+
+}
+/* Chrome, Safari, Opera */
+@-webkit-keyframes hatter {
+  0% {opacity: 1;}
+  50% {opacity: 1;}
+  100% {opacity: 0;}
+
+}
+
+/* Standard syntax */
+@keyframes hatter {
+  0% {opacity: 1;}
+  50% {opacity: 1;}
+  100% {opacity: 0;visibility: visible;}
+}
+}
