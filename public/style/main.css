@@ -61,9 +61,12 @@ a[href], a[onclick], input[type='submit'], input[type='image'], label[for], sele
         width: 100vw;
     }
     .content-card {
-        height: 100vh;
+        height: 90vh;
         margin-bottom: 10px;
         background-color: black;   
+    }
+    .content-card.homepage {
+        height: 98vh;
     }
 .content-wrapper {
     margin-top: 0vh;
@@ -92,30 +95,51 @@ a[href], a[onclick], input[type='submit'], input[type='image'], label[for], sele
         width: 30px;
     }
     #mobile-nav-opened {
-        background-color: gray;
+        background-color: black;
         position: absolute;
-        width: 95vw;
-        height: 100vh;
-        top: -25px;
-        right: -25px;
+        width: 80vw;
+        height: 70vh;
+        top: -20%;
+        right: -30%;
         padding-left: 0vw;
         box-sizing: border-box;
         z-index: 1;
         padding: 20vh 10vw;
+        transition: 1s;
 
-        
         animation-name: sirrisurran;
         animation-duration: 1.2s;
     }
     #mobile-nav-item:first-child {
         font-weight:bolder;
-        
+        font-size: 300%; 
+        border-bottom: 2px solid white;
     }
     #mobile-nav-item {
-        font-size: 250%;
+        font-size: 200%;
         margin-bottom: 12%;
-        text-align: right;
+        text-align: center;
         color: white;
+               
+    }
+    #mobile-nav-back {
+        color: white;
+        position: absolute;
+        top: 50px;
+        right: 40px;
+        border: solid white;
+        border-width: 0 3px 3px 0;
+        height: 20px;
+        width: 20px;
+        display: inline-block;
+        padding: 3px;
+        transform: rotate(-45deg);
+        -webkit-transform: rotate(-45deg);
+    }
+    #mobile-nav-back p {
+        font-size: 120%;
+        position: absolute;
+        transform: translateX(-70%) translateY(-190%) rotate(45deg);
     }
     
     /* Standard syntax */

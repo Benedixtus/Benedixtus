@@ -157,8 +157,20 @@ function cvopen() {
         document.getElementById("interesting").style.transition = "0.3s";
         document.getElementById("boring").style.transition = "0.3s";};
 }
-
+var mobilenav = 0;
 function hahaha() {
-    console.log("lefut");
+    if( mobilenav==0){
+        document.getElementById('mobile-nav-opened').style.top = "0";
     document.getElementById('mobile-nav-opened').style.display = "block";
+    document.getElementById('body').style.overflow = "hidden";
+    mobilenav = 1;
+    console.log(mobilenav);
+    } else {
+        document.getElementById('mobile-nav-opened').style.top = "-1000px";
+        setTimeout(() => {  document.getElementById('mobile-nav-opened').style.display = "none";}, 1000);
+        document.getElementById('body').style.overflow = "scroll";
+        mobilenav = 0;
+        console.log(mobilenav)
+    }
 }
+
