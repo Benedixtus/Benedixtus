@@ -153,3 +153,8 @@
     transform: scale(80%, 200%) translateY(5%);
     opacity: 0.8;
   }
+
+
+@media only screen and (max-width: 600px) {
+
+}

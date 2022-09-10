@@ -77,12 +77,21 @@ a[href], a[onclick], input[type='submit'], input[type='image'], label[for], sele
         display: none;
     }
     
+    #mheader {
+        height: 10px;
+        width: 100vw;
+        position: fixed;
+        top: 0;
+        left: 0;
+        background-color: black;
+    }
     #footer {
         height: 10px;
+        position: fixed;
     }
     #mobile-nav {
         display: inline;
-        position: absolute;
+        position: fixed;
         top: 35px;
         right: 35px;
         z-index: 1;
@@ -94,6 +103,9 @@ a[href], a[onclick], input[type='submit'], input[type='image'], label[for], sele
         height: 30px;
         width: 30px;
     }
+    svg {
+        filter: drop-shadow(0px 0px 5px rgb(255 255 255 / 0.4));
+      }
     #mobile-nav-opened {
         background-color: black;
         position: absolute;
@@ -101,7 +113,7 @@ a[href], a[onclick], input[type='submit'], input[type='image'], label[for], sele
         height: 70vh;
         top: -20%;
         right: -30%;
-        padding-left: 0vw;
+        padding: 0;
         box-sizing: border-box;
         z-index: 1;
         padding: 20vh 10vw;
